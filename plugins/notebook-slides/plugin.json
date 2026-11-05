@@ -1,11 +1,12 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "notebook-slides",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plan and build NotebookLM-quality slide decks: outline, a theme designed from scratch for the content, per-page designs, then either one image per slide delivered as a PDF, or an editable PowerPoint (.pptx) built from native text, shapes and charts over text-free art.",
   "author": {
     "name": "liuyong",
-    "email": "liuyong@umu.com"
+    "email": "liuyong@umu.com",
+    "url": "https://redeck.capsep.com/"
   },
   "license": "MIT",
   "keywords": [
@@ -23,7 +24,7 @@
     "com.openai": {
       "interface": {
         "displayName": "Notebook Slides",
-        "shortDescription": "NotebookLM-quality slide decks, as images or editable PPTX",
+        "shortDescription": "Impressive Notebook slides",
         "longDescription": "Turns your chat, notes, and uploaded files into a slide deck at the design level of NotebookLM. It works in three checkpoints you approve: an outline with the content of every page, a master theme designed from scratch for your subject, and a detailed design of each page. Then it either renders every slide as a finished 16:9 image and combines them into one PDF, or builds an editable PowerPoint file from native text, shapes, charts and tables over text-free generated art.",
         "developerName": "liuyong",
         "category": "Productivity",
@@ -44,8 +45,10 @@
         "composerIcon": "./assets/icon.png",
         "composerIconDark": "./assets/icon-dark.png",
         "logo": "./assets/logo.png",
-        "logoDark": "./assets/logo-dark.png"
+        "logoDark": "./assets/logo-dark.png",
+        "websiteURL": "https://redeck.capsep.com/"
       }
     }
-  }
+  },
+  "homepage": "https://redeck.capsep.com/"
 }
