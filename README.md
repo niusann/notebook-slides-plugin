@@ -1,8 +1,10 @@
 # Notebook Slides
 
-**Turn your notes into a slide deck worth sharing.**
+**The impressive slide style of Google NotebookLM, right in ChatGPT.**
 
-Bring a topic, a few notes, or a report. Notebook Slides helps you shape the story, choose a visual direction, and create a deck with a look designed for your content—inspired by NotebookLM-style presentations.
+Love the richly illustrated slides from Google NotebookLM (Gemini)? **Notebook Slides brings that visual approach to your own presentations**: expressive artwork, thoughtful layouts, and a consistent style designed around your topic.
+
+Give it your notes, a report, or just an idea. Create a visually striking deck as a **ready-to-share PDF** or an **editable PowerPoint**—directly in ChatGPT.
 
 ![Notebook Slides creating an illustrated AI presentation in ChatGPT](showcase-redacted.png)
 
@@ -23,7 +25,7 @@ Already use plugins? [Download the bundle with both skills](https://github.com/n
 
 ## Try a request
 
-> Make a 3-slide deck about artificial intelligence for a general audience. Use warm colors and playful illustrations. Deliver it as a PDF.
+> Make a 3-slide deck about artificial intelligence with the impressive visual style of Google NotebookLM. Use warm colors and playful illustrations for a general audience. Deliver it as a PDF.
 
 > Turn the attached report into an editable 12-slide PowerPoint for our leadership team. Focus on the key findings and recommended next steps.
 
