@@ -25,6 +25,10 @@ Use **Plugin Creator** to add the bundle to your account or workspace, where plu
 4. Follow Plugin Creator's prompts, then open the plugin link it returns. Review the details and click **Install plugin** or the **+** install button. You may also find it under **Plugins → Personal → Created by me**, when available.
 5. Start a **new conversation**, type **@**, and select **Notebook Slides**. Attach your notes or report and ask for a presentation.
 
+![Notebook Slides installed in ChatGPT, showing Try in chat and starter prompts](installation-preview.png)
+
+Once installed, click **Try in chat** or choose a starter prompt to make your first deck.
+
 Plugin Creator and plugin creation depend on your account and workspace permissions. If unavailable, ask your workspace admin or try the desktop installation below. No MCP server or separate API key is required by this plugin. See OpenAI's guides to [creating plugins](https://learn.chatgpt.com/docs/build-plugins) and [installing and using plugins](https://learn.chatgpt.com/docs/plugins).
 
 ### Alternative: install a local plugin in ChatGPT desktop
