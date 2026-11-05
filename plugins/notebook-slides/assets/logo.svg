@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Notebook Slides: a fanned stack of 16:9 slides; the front slide has a title, body and hero panel; a spark marks image generation -->
+  <rect width="512" height="512" rx="112" fill="#0F233B"/>
+  <g transform="translate(0 18)">
+    <rect x="96" y="200" width="320" height="180" rx="20" fill="#B8975A" opacity="0.35" transform="rotate(-11 256 290) translate(10 -62)"/>
+    <rect x="96" y="200" width="320" height="180" rx="20" fill="#B8975A" opacity="0.6" transform="rotate(-5 256 290) translate(4 -32)"/>
+    <rect x="96" y="200" width="320" height="180" rx="20" fill="#F7F2E3"/>
+    <rect x="122" y="228" width="128" height="16" rx="8" fill="#0F233B"/>
+    <rect x="122" y="254" width="84" height="10" rx="5" fill="#0F233B" opacity="0.45"/>
+    <rect x="122" y="304" width="100" height="9" rx="4.5" fill="#0F233B" opacity="0.3"/>
+    <rect x="122" y="324" width="88" height="9" rx="4.5" fill="#0F233B" opacity="0.3"/>
+    <rect x="122" y="344" width="96" height="9" rx="4.5" fill="#0F233B" opacity="0.3"/>
+    <clipPath id="hero"><rect x="258" y="226" width="132" height="128" rx="12"/></clipPath>
+    <g clip-path="url(#hero)">
+      <rect x="258" y="226" width="132" height="128" fill="#0F233B"/>
+      <circle cx="346" cy="270" r="18" fill="#B8975A"/>
+      <path d="M258 354 L258 324 Q292 290 326 316 Q356 296 390 312 L390 354 Z" fill="#8B1E2D"/>
+    </g>
+  </g>
+  <path d="M404 64 Q411 100 444 107 Q411 114 404 150 Q397 114 364 107 Q397 100 404 64 Z" fill="#F7F2E3"/>
+  <path d="M452 150 Q455 165 469 168 Q455 171 452 186 Q449 171 435 168 Q449 165 452 150 Z" fill="#B8975A"/>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "notebook-slides",
+  "version": "1.0.0",
+  "description": "Plan and build NotebookLM-quality slide decks: outline, a theme designed from scratch for the content, per-page designs, then either one image per slide delivered as a PDF, or an editable PowerPoint (.pptx) built from native text, shapes and charts over text-free art.",
+  "author": {
+    "name": "liuyong",
+    "email": "liuyong@umu.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "slides",
+    "presentation",
+    "deck",
+    "image generation",
+    "notebooklm",
+    "design",
+    "pptx",
+    "powerpoint"
+  ],
+  "skills": "./skills/",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Notebook Slides",
+        "shortDescription": "NotebookLM-quality slide decks, as images or editable PPTX",
+        "longDescription": "Turns your chat, notes, and uploaded files into a slide deck at the design level of NotebookLM. It works in three checkpoints you approve: an outline with the content of every page, a master theme designed from scratch for your subject, and a detailed design of each page. Then it either renders every slide as a finished 16:9 image and combines them into one PDF, or builds an editable PowerPoint file from native text, shapes, charts and tables over text-free generated art.",
+        "developerName": "liuyong",
+        "category": "Productivity",
+        "capabilities": [
+          "Plan slide decks",
+          "Design a custom theme per deck",
+          "Render slides as images",
+          "Export the deck as PDF",
+          "Build editable PowerPoint decks"
+        ],
+        "defaultPrompt": [
+          "Make a slide deck from these notes.",
+          "Turn the attached report into an editable 12-slide PowerPoint.",
+          "Make a 10-slide deck about octopus intelligence."
+        ],
+        "brandColor": "#0F233B",
+        "brandColorDark": "#B8975A",
+        "composerIcon": "./assets/icon.png",
+        "composerIconDark": "./assets/icon-dark.png",
+        "logo": "./assets/logo.png",
+        "logoDark": "./assets/logo-dark.png"
+      }
+    }
+  }
+}
