@@ -1,10 +1,10 @@
-# Notebook Slides Plugin — Gemini Notebook-style presentations in ChatGPT
+# Notebook Slides — impressive Notebook-style presentations
 
-**The impressive slide style of Gemini Notebook (formerly NotebookLM), right in ChatGPT.**
+**The impressive slide style of Gemini Notebook (formerly NotebookLM), in your AI assistant.**
 
 Turn your notes, reports, or ideas into richly illustrated presentations—with expressive artwork, thoughtful layouts, and a consistent style designed around your topic.
 
-A ChatGPT and Codex plugin with two presentation skills: `notebook-slides` for illustrated PDF decks, and `notebook-slides-pptx` for editable PowerPoint. One installation includes both skills.
+A presentation skill packaged as a plugin for ChatGPT, Codex, and other AI assistants that support compatible plugins. Install it once, share your content, and ask for a deck.
 
 ![Notebook Slides creating an illustrated AI presentation in ChatGPT](showcase-redacted.png)
 
@@ -12,20 +12,18 @@ A ChatGPT and Codex plugin with two presentation skills: `notebook-slides` for i
 
 Use **Plugin Creator** to add the bundle to your account or workspace, where plugin creation is available:
 
-1. [**Download notebook-slides-plugin.zip**](https://github.com/niusann/notebook-slides-plugin/releases/latest/download/notebook-slides-plugin.zip). Keep the file zipped. Choose the **plugin** ZIP to get both output options.
+1. [**Download Notebook Slides**](https://github.com/niusann/notebook-slides-plugin/releases/latest/download/notebook-slides-plugin.zip). Keep the file zipped.
 2. Open a new ChatGPT conversation. Type **@**, search for **Plugin Creator**, and select it.
 3. Attach the downloaded ZIP and send this message:
 
    ```text
    Create a private plugin called Notebook Slides from the attached package.
-   Keep both included skills and all their reference files as supplied.
+   Keep the included instructions and reference files as supplied.
    Give me the plugin link so I can install it.
    ```
 
 4. Follow Plugin Creator's prompts, then open the plugin link it returns. Review the details and click **Install plugin** or the **+** install button. You may also find it under **Plugins → Personal → Created by me**, when available.
 5. Start a **new conversation**, type **@**, and select **Notebook Slides**. Attach your notes or report and ask for a presentation.
-
-Just specify **PowerPoint** or **PDF** in your prompt. One download includes both options.
 
 Plugin Creator and plugin creation depend on your account and workspace permissions. If unavailable, ask your workspace admin or try the desktop installation below. No MCP server or separate API key is required by this plugin. See OpenAI's guides to [creating plugins](https://learn.chatgpt.com/docs/build-plugins) and [installing and using plugins](https://learn.chatgpt.com/docs/plugins).
 
@@ -50,11 +48,15 @@ codex
 
 Enter `/plugins`, choose **Notebook Slides (local)**, and install **Notebook Slides**. Start a new session before using the skills. Image generation and file creation must be available in your environment to produce a complete deck.
 
+### Other AI assistants
+
+If your assistant supports compatible plugin imports, download the same Notebook Slides ZIP and follow its installation instructions. Then share your content and ask it to use Notebook Slides. Support depends on the assistant; image generation and file creation are needed for a complete deck.
+
 ## Try it
 
-> Make a 10-slide presentation about artificial intelligence in the visual style of Google Gemini Notebook (formerly NotebookLM). Use warm colors and playful illustrations. Deliver it as an editable PowerPoint.
+> Make a 10-slide presentation about artificial intelligence in the visual style of Google Gemini Notebook (formerly NotebookLM). Use warm colors and playful illustrations.
 
-> Turn this report into a presentation for our leadership team. Focus on the key findings and next steps. Give me a PDF.
+> Turn this report into an impressive presentation for our leadership team. Focus on the key findings and next steps.
 
 Notebook Slides guides you through the outline, visual theme, and slide designs before creating your deck. You can ask for changes along the way—or say **“just generate it”** to go straight to the result.
 
@@ -72,15 +74,12 @@ Already have an editable PowerPoint? Just keep editing it directly.
 |---|---|
 | The plugin or skills do not appear | Check that the plugin is installed, then start a new conversation. |
 | The local marketplace is missing | Open the repository root in Work mode / Codex and restart the desktop app. |
-| The output is not the format you wanted | Ask for an **editable PowerPoint (.pptx)** or an **illustrated PDF** explicitly. |
-| Images or the downloadable deck are missing | Use a session with image generation and file creation enabled. If image generation is unavailable, the skill supplies prompts; the PPTX skill can use placeholders with prompts in the notes. |
+| Images or the downloadable deck are missing | Use a session with image generation and file creation enabled. |
 
 ## Downloads
 
-- [Full plugin: PDF + PowerPoint skills](https://github.com/niusann/notebook-slides-plugin/releases/latest/download/notebook-slides-plugin.zip) — recommended for ChatGPT.
-- [PDF skill only](https://github.com/niusann/notebook-slides-plugin/releases/latest/download/notebook-slides.zip).
-- [PowerPoint skill only](https://github.com/niusann/notebook-slides-plugin/releases/latest/download/notebook-slides-pptx.zip).
+[**Download Notebook Slides**](https://github.com/niusann/notebook-slides-plugin/releases/latest/download/notebook-slides-plugin.zip)
 
-The individual skill ZIPs are for hosts that support standalone skill imports. Downloading the source repository is only needed for the local desktop route.
+One plugin, ready to install. Downloading the source repository is only needed for the local desktop route.
 
 This independent plugin is inspired by the visual style of Gemini Notebook / NotebookLM. It is not affiliated with Google or OpenAI. The v1.0.0 workflows have not yet been tested end to end in ChatGPT.
