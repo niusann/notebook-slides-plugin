@@ -1,6 +1,6 @@
-# Notebook Slides
+# Notebook Slides — Gemini Notebook-style presentations
 
-**The impressive slide style of Google NotebookLM, right in ChatGPT.**
+**The impressive slide style of Gemini Notebook (formerly NotebookLM), right in ChatGPT.**
 
 Turn your notes, reports, or ideas into richly illustrated presentations—with expressive artwork, thoughtful layouts, and a consistent style designed around your topic.
 
@@ -16,7 +16,7 @@ Just specify **PowerPoint** or **PDF** in your prompt. One download includes bot
 
 ## Try it
 
-> Make a 10-slide presentation about artificial intelligence in the visual style of Google NotebookLM. Use warm colors and playful illustrations. Deliver it as an editable PowerPoint.
+> Make a 10-slide presentation about artificial intelligence in the visual style of Google Gemini Notebook (formerly NotebookLM). Use warm colors and playful illustrations. Deliver it as an editable PowerPoint.
 
 > Turn this report into a presentation for our leadership team. Focus on the key findings and next steps. Give me a PDF.
 
