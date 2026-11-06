@@ -70,8 +70,6 @@ For the best result, mention your audience and preferred slide count. Your assis
 
 A useful workflow: get the visual design right first, then make your final edits. If you love your PDF deck but want to change the wording, try [ReDeck](https://redeck.capsep.com/). Upload the PDF, choose your slides, and download a PowerPoint with editable text and supported movable graphics.
 
-Already have an editable PowerPoint? Just keep editing it directly.
-
 ## Need help?
 
 | Problem | What to try |
