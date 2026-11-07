@@ -11,8 +11,7 @@ renders every slide as one finished picture. This skill reproduces that pipeline
 image generation tool as the renderer.
 
 **Every deck gets its own art direction, designed from scratch for its content.** There are no
-presets or templates. Never reuse a theme from an earlier deck or from the examples mentioned in
-the references; they only illustrate the method.
+presets or templates. Never reuse a theme from an earlier deck.
 
 ## Files
 
@@ -35,7 +34,7 @@ Ask a question only if something essential can't be inferred (for example, two c
 Follow `planner.md` step 1. Show:
 - **Angle**: the focused, reframed thread the deck will follow (plus 2–3 alternatives if the
   material is broad), the deck's intent (story, ideas, how-to, technical brief), and the series
-  formula (e.g. "Step 1–5", "Case File 01–04").
+  formula (e.g. "Step 1–N", "Part I–III", "Case 01–N").
 - **Thesis** in one sentence, and the narrative arc (acts or pillars).
 - **Assets found**: each uploaded image, chart, or data table, and which slide will use it (or why
   it won't be used).
@@ -77,10 +76,13 @@ Each prompt has these parts, in order:
 [ONE SLIDE SPEC]
 ```
 
-- **Self-contained prompts.** The image tool doesn't reliably see earlier turns, so always include
-  the full rules and style guide, never "same as before".
-- **Size:** landscape 16:9. If the tool can't do 16:9, use the widest landscape size it offers
-  (e.g. 1536×1024) and tell it to keep all text inside a centered 16:9 safe area.
+- **Self-contained, verbatim prompts.** The image tool doesn't reliably see earlier turns, so always
+  pass the full rules, full style guide, and full slide spec in every call—never "same as before",
+  and never summarize, paraphrase, or strip out `TEXT TO RENDER` strings, hex codes, or layout
+  percentages when invoking the image tool.
+- **Size:** landscape 16:9 (e.g. 1376×768, 1792×1024, or 1536×1024). If the tool's widest landscape
+  size is slightly taller than 16:9 (such as 1536×1024), instruct it to keep all content inside a
+  centered 16:9 safe area with full-bleed background texture to the edges.
 - **User's images:** when a spec uses an uploaded image (a photo, logo, chart, product shot), pass it
   to the image tool as an input/reference and say in the spec how to use it ("place this photo in
   the right 55%, duotone in the palette").
@@ -112,24 +114,36 @@ or the style guide, then re-render only the affected slides.
 
 ### Step 7: Deliver as one PDF
 The slides are images, so the deliverable is a single PDF, nothing else (no PPTX). When all slides
-are approved, use the code/file tool (e.g. Python with Pillow or img2pdf) to combine the final
-images in slide order into one PDF: one slide per page, page size matching the image's aspect
-ratio, no margins, no re-compression beyond high-quality JPEG. If an image isn't 16:9, center-crop
-it to 16:9 first. Name the file after the deck title and offer it as a download. If no code/file
-tool is available, list the slide images in order and tell the user to save them.
+are approved, use the Python/code tool with `Pillow` (`PIL.Image`, which is pre-installed in
+standard sandboxes) to combine the final images in slide order into one PDF: convert each image to
+`RGB`, center-crop to 16:9 (`width / height = 16 / 9`) if the renderer output a taller ratio like
+3:2, and save with `first_img.save(pdf_path, "PDF", resolution=150.0, save_all=True, append_images=rest_imgs)`—one
+slide per page, zero page margins. Name the file after the deck title and offer a download link. If
+no code/file tool is available, list the slide images in order and tell the user to save them.
 
-## Known failure modes (seen in testing)
+## Known failure modes (and guardrails)
 - Repeated or dropped words in long paragraphs. Keep paragraphs ≤ 70 words.
-- Diagram labels swapped between nodes. List every node label and connection explicitly; re-check.
-- Text from earlier slides leaking in during long chats. Self-contained prompts and the "do not copy
-  its text" line help.
-- Display font substituted (sans instead of serif). Describe the font's look, not just its name.
-- Tables crowding the edges. Restate the outer margin (≈ 5–6%) in COMPOSITION.
-- Spec words printed on the slide (seen in NotebookLM's own decks too): font names, field labels
-  turned into headings ("The Visual", "The Evidence"), a title printed twice. Keep those words out
-  of TEXT TO RENDER and say "render each string once".
-- Signature device drifting (a seal's emblem changing between slides). Describe it identically in
-  every prompt and attach an approved slide as reference.
-- Font drift inside a series (serif on Case File 1–3, typewriter on 4). Restate the type roles in
-  every series spec.
+- Diagram labels swapped or merged between nodes. List every node label and connection explicitly,
+  and specify whether each label sits inside the node shape or outside to the left/right; re-check.
+- Text or deck titles from the style guide leaking onto slides as a running header. Never put the
+  deck title or font names in double quotes inside `DECK STYLE GUIDE` (use plain `DECK STYLE GUIDE`
+  and unquoted font names), and include the "do not copy its text" line when attaching references.
+- Display font substituted (sans instead of serif). Describe the font's visual traits inline on
+  recurring fields in every series spec (e.g. `Heading (bold high-contrast serif ALL CAPS — never
+  sans-serif)`), not just in the style guide.
+- Tables crowding container edges or drawing uneven divider bars. Specify internal container padding
+  so thin grid lines stop cleanly short of the card edges or outer margins, with uniform divider
+  stroke weights.
+- Left-edge clipping on long claim titles or left-column charts with vertical Y-axis labels. Always
+  state an explicit 6–7% outer safe margin on all four sides (never "full-width"), and place a
+  left-side chart's vertical Y-axis line at ~12% from the left edge so the rotated Y-axis label sits
+  inside the canvas.
+- Missing quotation marks when a decorative quote glyph is present. Explicitly state that quoted
+  strings retain their surrounding double quotation marks alongside the decorative quote icon.
+- Spec words printed on the slide: font names, field labels turned into headings ("The Visual",
+  "The Evidence", "Section Title:"), or a title printed twice. Keep those words out of
+  TEXT TO RENDER and say "render each string once".
+- Signature device drifting across turns. Describe its exact shape, color, size, and position
+  identically in every prompt and attach an approved slide as reference.
+- Font drift inside a series. Restate the type roles inline in every series spec.
 - Invented or unattributed closing quotes. Only real, attributed quotes go in quotation marks.

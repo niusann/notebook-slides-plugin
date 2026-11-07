@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "notebook-slides",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Plan and build NotebookLM-quality slide decks: outline, a theme designed from scratch for the content, per-page designs, then one finished image per slide delivered as a single PDF.",
   "author": {
     "name": "liuyong",
